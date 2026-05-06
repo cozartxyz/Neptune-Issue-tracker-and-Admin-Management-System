@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background: #050914;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* the framework for my front end */
+.neptune-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.neptune-shell {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        90deg,
+        #182130 0%,
+        #0c1421 42%,
+        #040811 100%
+    );
+}
+
+
+.neptune-bg {
+    position: absolute;
+    right: -260px;
+    bottom: -460px;
+    width: 760px;
+    opacity: 0.96;
+    pointer-events: none;
+    z-index: 1;
+    filter:
+        drop-shadow(0 0 26px rgba(93, 158, 255, 0.72))
+        drop-shadow(0 0 68px rgba(28, 103, 235, 0.34))
+        drop-shadow(0 0 115px rgba(28, 103, 235, 0.20));
+}
+
+
+.neptune-shell::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(65, 145, 255, 0.16) 0%,
+        rgba(65, 145, 255, 0.08) 38%,
+        transparent 72%
+    );
+    filter: blur(34px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.neptune-nav {
+    position: relative;
+    z-index: 3;
+    margin: 14px 16px 0 16px;
+    height: 56px;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.025);
+    padding: 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.neptune-brand {
+    font-size: 18px;
+    font-weight: 150;
+    letter-spacing: 0.6px;
+    color: rgba(255,255,255,0.72);
+}
+
+.neptune-nav-btn {
+    text-decoration: none;
+    border: none;
+    background: #1677ff;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(22,119,255,0.26);
+}
+
+.neptune-content {
+    position: relative;
+    z-index: 3;
+    min-height: calc(100vh - 70px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    padding: 0 70px;
+}
+
+.neptune-about {
+    max-width: 430px;
+    transform: translateY(20px);
+}
+
+.neptune-about h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    color: rgba(255,255,255,0.92);
+}
+
+.neptune-about p {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 200;
+    letter-spacing: 0.6px;
+    color: rgba(255,255,255,0.70);
+}
+
+.neptune-card {
+    width: 370px;
+    padding: 24px;
+    border-radius: 24px;
+
+    background: rgba(7, 11, 19, 0.46);
+    border: 1px solid rgba(255,255,255,0.14);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.44),
+        inset 0 0 16px rgba(255,255,255,0.02);
+
+    justify-self: center;
+    transform: translate(40px, 10px);
+}
+
+.neptune-card h1 {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 18px;
+}
+
+.neptune-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.neptune-input {
+    width: 100%;
+    height: 42px;
+
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 4px;
+
+    padding: 0 12px;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 300;
+    outline: none;
+}
+
+.neptune-input::placeholder {
+    color: rgba(255,255,255,0.66);
+    font-weight: 400;
+}
+
+.neptune-input:focus {
+    border-color: rgba(22, 119, 255, 0.705);
+    box-shadow: 0 0 10px rgba(22,119,255,0.18);
+}
+
+.neptune-submit {
+    margin-top: 2px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #001fff,
+        #0012d8
+    );
+
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 0 14px rgba(0,42,255,0.24);
+}
+
+.neptune-submit:hover,
+.neptune-nav-btn:hover {
+    filter: brightness(1.08);
+}
+
+
+.neptune-login-content {
+    position: relative;
+    z-index: 3;
+    min-height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 70px;
+}
+
+.neptune-hero-title {
+    font-size: 72px;
+    line-height: 1.18;
+    font-weight: 600;
+    color: rgba(255,255,255,0.96);
+    letter-spacing: -1px;
+    transform: translateY(-90px);
+}
+
+.neptune-login-card {
+    width: 370px;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(7, 11, 19, 0.46);
+    border: 1px solid rgba(255,255,255,0.14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.44),
+        inset 0 0 16px rgba(255,255,255,0.02);
+    justify-self: center;
+    transform: translate(15px, 25px);
+}
+
+.neptune-login-card h1 {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.86);
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.neptune-login-card .neptune-form {
+    gap: 12px;
+}
+
+.neptune-forgot {
+    display: block;
+    text-align: center;
+    margin-top: 34px;
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.neptune-forgot:hover {
+    color: #ffffff;
+}
+
+/* animations man below*/
+.neptune-animate {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+body.loaded .neptune-animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 
+        opacity 1.1s ease,
+        transform 1.1s cubic-bezier(.2,.8,.2,1);
+}
+
+.neptune-animate:nth-child(1) { transition-delay: 0.05s; }
+.neptune-animate:nth-child(2) { transition-delay: 0.1s; }
+.neptune-animate:nth-child(3) { transition-delay: 0.15s; }
+.neptune-animate:nth-child(4) { transition-delay: 0.2s; }
+.neptune-animate:nth-child(5) { transition-delay: 0.25s; }
+.neptune-animate:nth-child(6) { transition-delay: 0.3s; }
+
+.neptune-hero-title {
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+body.loaded .neptune-hero-title {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.3s cubic-bezier(.2,.8,.2,1);
+    transition-delay: 0.2s;
+}
+
+.neptune-about {
+    opacity: 0;
+    transform: translateY(70px);
+}
+
+body.loaded .neptune-about {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.3s ease;
+    transition-delay: 0.25s;
+}
+
+.neptune-nav {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+body.loaded .neptune-nav {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+.neptune-bg {
+    animation: planetPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes planetPulse {
+    from {
+        filter:
+            drop-shadow(0 0 18px rgba(93,158,255,0.5))
+            drop-shadow(0 0 50px rgba(28,103,235,0.25));
+    }
+    to {
+        filter:
+            drop-shadow(0 0 40px rgba(93,158,255,0.9))
+            drop-shadow(0 0 90px rgba(28,103,235,0.45));
+    }
+}
+
+.neptune-nav-btn,
+.neptune-submit,
+.action-btn,
+.reset-submit,
+.otp-submit,
+.msg-btn {
+    transition: all 0.2s ease;
+}
+
+.neptune-nav-btn:hover,
+.neptune-submit:hover,
+.action-btn:hover,
+.reset-submit:hover,
+.otp-submit:hover,
+.msg-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+}
+
+.neptune-input,
+.reset-input,
+.otp-box,
+.action-select {
+    transition: all 0.2s ease;
+}
+
+.neptune-input:focus,
+.reset-input:focus,
+.otp-box:focus {
+    transform: translateY(-2px);
+}
+
+.users-table tbody tr,
+.requests-table tbody tr,
+.tickets-table tbody tr,
+.logs-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.users-table tbody tr:hover,
+.requests-table tbody tr:hover,
+.tickets-table tbody tr:hover,
+.logs-table tbody tr:hover {
+    transform: translateX(6px);
+}
+
+.dock-link {
+    transition: all 0.2s ease;
+}
+
+.dock-link:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 0 16px rgba(22,119,255,0.3);
+}
