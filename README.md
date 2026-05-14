@@ -3,10 +3,7 @@ A PHP based web app combining security features and communication for issue repo
 
 # Neptune
 
-Neptune is a security-focused issue tracking and admin management web application built using PHP and MySQL. The project was originally developed as part of university coursework but gradually expanded into a larger personal project focused on authentication, user management and secure workflow handling.
-
-The overall goal of the system was to create something that felt more like a modern real-world platform rather than a basic university CRUD application.
-
+Neptune is a security-focused issue tracking and admin management web application built using PHP and MySQL.
 ---
 
 ## Features
@@ -32,7 +29,7 @@ The overall goal of the system was to create something that felt more like a mod
 - JavaScript
 - PHPMailer
 - XAMPP
-- Figma
+- Figma - Figma original designs vary slightly from final release
 
 ---
 
